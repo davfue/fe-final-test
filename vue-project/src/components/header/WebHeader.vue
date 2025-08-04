@@ -1,8 +1,8 @@
 <template>
-  <header class="shadow-sm container-fluid bg-white py-3 border-bottom fixed-top">
-    <div class="container-md d-flex justify-content-between align-items-center gap-4">
-      <router-link to="/">
-        <img src="@/assets/images/logo.png" alt="Logo" class="logo-image">
+  <header class="shadow-sm container-fluid bg-white py-2 border-bottom fixed-top">
+    <div class="container-md d-flex justify-content-between align-items-center gap-2 gap-md-3 gap-lg-4">
+      <router-link to="/" class="d-none d-md-block">
+          <img src="@/assets/images/logo.png" alt="Logo" class="logo-image"></img>
       </router-link>
       <SearchMenu></SearchMenu>
       <NavigationBar></NavigationBar>
