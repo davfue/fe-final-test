@@ -1,9 +1,8 @@
 <template>
   <div>
     <WebHeader></WebHeader>
-    <HomePage style="height: 500px;"></HomePage>
-    <!-- <router-view></router-view> -->
-     <WebFooter></WebFooter>
+    <router-view></router-view>
+    <WebFooter></WebFooter>
   </div>
 </template>
 
@@ -11,4 +10,6 @@
   import HomePage from '@/components/pages/HomePage.vue';
   import WebHeader from '@/components/header/WebHeader.vue';
   import WebFooter from '@/components/footer/WebFooter.vue';
+  // import WebLogin from '@/components/auth/WebLogin.vue';
+  // import WebSignup from '@/components/auth/WebSignup.vue';
 </script>

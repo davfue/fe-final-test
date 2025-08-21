@@ -1,23 +1,4 @@
 <template>
-    <!-- MODAL -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="header__signup col-8 col-sm-4 fw-semibold d-flex justify-content-evenly align-items-center text-decoration-none gap-2"
         style="text-align: right">
         <div class="position-relative me-1">
@@ -35,7 +16,7 @@
                         src="@/assets/images/profilephoto.png"></img>
                 </a>
                 <ul class="dropdown-menu" style="width: 200px;">
-                    <router-link to="/" class="dropdown-item" style="font-size: 17px;">
+                    <router-link to="/user/profile-details" class="dropdown-item" style="font-size: 17px;">
                         <User class="me-2" />Profile
                     </router-link>
                     <router-link to="/" class="dropdown-item" style="font-size: 17px;">
@@ -44,7 +25,7 @@
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalLogout"
                         style="color: #CB3A31; font-size: 17px;">
                         <LogOut class="me-2" />Logout
                     </li>
@@ -55,12 +36,12 @@
 </template>
 
 <script setup>
-    import {
-        useRouter
-    } from "vue-router"
-    import {
-        useStore
-    } from "vuex"
+    // import {
+    //     useRouter
+    // } from "vue-router"
+    // import {
+    //     useStore
+    // } from "vuex"
     import {
         ShoppingCart,
         Heart,
@@ -69,13 +50,13 @@
         LogOut
     } from 'lucide-vue-next';
 
-    const store = useStore()
-    const router = useRouter()
+    // const store = useStore()
+    // const router = useRouter()
 
-    const logout = () => {
-        store.commit("auth/setUserLogout")
-        router.push("/")
-    }
+    // const logout = () => {
+    //     store.commit("auth/setUserLogout")
+    //     router.push("/")
+    // }
 </script>
 
 <style>

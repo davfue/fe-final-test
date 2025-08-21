@@ -4,17 +4,22 @@
       <router-link to="/" class="d-none d-md-block">
           <img src="@/assets/images/logo.png" alt="Logo" class="logo-image"></img>
       </router-link>
-      <SearchMenu></SearchMenu>
-      <NavigationBar></NavigationBar>
+        <SearchMenu v-if="route.name !== 'login' && route.name !== 'signup'"></SearchMenu>
+        <NavigationBar v-if="route.name !== 'login' && route.name !== 'signup'"></NavigationBar>
       <LanguageMenu></LanguageMenu>
     </div>
   </header>
+  <ModalLogout></ModalLogout>
 </template>
 
 <script setup>
 import NavigationBar from '@/components/header/NavigationBar.vue';
 import SearchMenu from "@/components/header/SearchMenu.vue";
 import LanguageMenu from "@/components/header/LanguageMenu.vue";
+import ModalLogout from "@/components/header/ModalLogout.vue";
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
 </script>
 
 <style>
